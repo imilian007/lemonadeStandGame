@@ -1,20 +1,18 @@
 ﻿using System;
 namespace LemonadeStand
 {
-    public class Goods
+    public abstract class Goods
     {
-        int value;
+        protected int value = 0;
 
-        int quantity;
+        public int quantity = 0;
 
-        string name;
         public Goods()
         {
         }
 
-        public virtual purchase(int quantity)
-        {
+        public abstract int Purchase(int purchaseAmmount, int money);
 
-        }
+        public abstract int UseGood(int[] recipeArray);
     }
 }

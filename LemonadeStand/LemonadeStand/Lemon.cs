@@ -10,9 +10,12 @@ namespace LemonadeStand
             this.quantity = quantity;
         }
 
-        public override int Purchase(int purchaseAmmount)
+        public override int Purchase(int purchaseAmmount, int money)
         {
-            quantity = quantity + purchaseAmmount;
+            if (purchaseAmmount * value < money)
+            {
+                quantity = quantity + purchaseAmmount;
+            }
             return quantity;
         }
 

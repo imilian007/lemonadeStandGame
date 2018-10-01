@@ -34,5 +34,10 @@ namespace LemonadeStand
             }
             return weather;
         }
+
+        public void DisplayForecast(string weather)
+        {
+            Console.WriteLine("Forecast for tomorrow is: {0}", weather);
+        }
     }
 }
